@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="Name"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Pays"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Owes"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/inside_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/add_field_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Add Field" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Timer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gdays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="8dp"
+            android:text="Days"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+        <TextView
+            android:id="@+id/ghours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Hours"
+            app:layout_constraintLeft_toLeftOf="@+id/gdays"
+            app:layout_constraintTop_toBottomOf="@+id/gdays" />
+
+        <TextView
+            android:id="@+id/gminutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Minutes"
+            app:layout_constraintLeft_toLeftOf="@+id/ghours"
+            app:layout_constraintTop_toBottomOf="@+id/ghours" />
+
+        <EditText
+            android:id="@+id/enter_gdays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="2"
+            app:layout_constraintLeft_toRightOf="@+id/gdays"
+            app:layout_constraintTop_toTopOf="@+id/gdays" />
+
+        <EditText
+            android:id="@+id/enter_ghours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="2"
+            app:layout_constraintLeft_toLeftOf="@+id/enter_gdays"
+            app:layout_constraintTop_toTopOf="@+id/ghours" />
+
+        <EditText
+            android:id="@+id/enter_gminutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="2"
+            app:layout_constraintLeft_toLeftOf="@+id/enter_ghours"
+            app:layout_constraintTop_toTopOf="@+id/gminutes" />
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/add_group_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Group" />
+
+</LinearLayout>
